@@ -16,12 +16,24 @@ public class MaximumFinder {
 		return max; // returns the largest object
 	} // end method maximum
 
-	
-	
+	public static String testMaximum(String x, String y, String z) {
+		String max = x; // assume x is initially the largest
+
+		if (y.compareTo(max) > 0)
+			max = y; // y is the largest so far
+
+		if (z.compareTo(max) > 0)
+			max = z; // z is the largest
+
+		return max; // returns the largest object
+	} // end method testMaximum
+
 	public static void main(String args[]) {
 		// Find Maximum Integer Value.
 		System.out.println("Maximum Integer Value Is = " + maximum(90, 37, 55));
 		// Find Maximum Float Value.
 		System.out.println("Maximum Float Value Is = " + maximum(1.2, 2.4, 5.5));
+		// Find Maximum String Value.
+		System.out.println("Maximum String Value Is = " + testMaximum("Apple", "Peach", "Banana"));
 	}
 }

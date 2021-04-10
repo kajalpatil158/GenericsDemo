@@ -4,36 +4,24 @@ package com.generics;
 //Find The Maximum Value Of Integer,Float and String.
 First Check Maximum value For Integer*/
 public class MaximumFinder {
-	public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
-		T max = x; // assume x is initially the largest
+	public static <T extends Comparable> void findmax(T[] element) {
+		T max = element[0];
+		//Check Every Element from element that prints a integer maximum value
+		for (T i : element) {
+			// Comparing elements and print which one is maximum.
+			if (i.compareTo(max) > 0) {   
+				max = i;
+			}
+		}
+		//Message for maximum array value and print that value.
+		System.out.println("Maximum value in array is " + max);
 
-		if (y.compareTo(max) > 0)
-			max = y; // y is the largest so far
-
-		if (z.compareTo(max) > 0)
-			max = z; // z is the largest
-
-		return max; // returns the largest object
-	} // end method maximum
-
-	public static String testMaximum(String x, String y, String z) {
-		String max = x; // assume x is initially the largest
-
-		if (y.compareTo(max) > 0)
-			max = y; // y is the largest so far
-
-		if (z.compareTo(max) > 0)
-			max = z; // z is the largest
-
-		return max; // returns the largest object
-	} // end method testMaximum
-
+	}
+		
 	public static void main(String args[]) {
-		// Find Maximum Integer Value.
-		System.out.println("Maximum Integer Value Is = " + maximum(90, 37, 55));
-		// Find Maximum Float Value.
-		System.out.println("Maximum Float Value Is = " + maximum(1.2, 2.4, 5.5));
-		// Find Maximum String Value.
-		System.out.println("Maximum String Value Is = " + testMaximum("Apple", "Peach", "Banana"));
+		//Find Maximum Integer Element From array
+		Integer[] intArray = { 10, 55, 24, 97,100,2,59};
+		findmax(intArray);
+		
 	}
 }

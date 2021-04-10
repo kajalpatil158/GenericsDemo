@@ -18,6 +18,6 @@ public class MaximumFinder {
 
 	public static void main(String args[]) {
 		// Find Maximum Integer Value.
-		System.err.println("Maximum Value Is =" + maximum(3, 4, 5));
+		System.err.println("Maximum Value Is =" + maximum(90, 37, 55));
 	}
 }

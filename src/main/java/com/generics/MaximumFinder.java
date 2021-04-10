@@ -4,24 +4,30 @@ package com.generics;
 //Find The Maximum Value Of Integer,Float and String.
 First Check Maximum value For Integer*/
 public class MaximumFinder {
-	public static <T extends Comparable> void findmax(T[] element) {
+	public static <T extends Comparable<T>> void PrintMax(T[] element) {
 		T max = element[0];
-		//Check Every Element from element that prints a integer maximum value
+		// Using for Each Method Check Value Of Every Integer,Float,String Datatype.
 		for (T i : element) {
-			// Comparing elements and print which one is maximum.
-			if (i.compareTo(max) > 0) {   
+			if (i.compareTo(max) > 0) {
 				max = i;
 			}
 		}
-		//Message for maximum array value and print that value.
-		System.out.println("Maximum value in array is " + max);
+		// Message For Maximum Value And Print That Value.
+		System.out.println("Maximum value in array is = " + max);
+	}// End Of MaximumFinder
+
+	public static void main(String args[]) {
+		/*
+		 * Find Maximum intArray Value Find Maximum floatArray Value Find Maximum
+		 * stringArray Value By Calling PrintMax Method
+		 */
+		Integer[] intArray = { 10, 55, 24, 97 };
+		Float[] floatArray = { 4f, 9f, 3f, 10f };
+		String[] stringArray = { "Kajal", "Manoj", "Rinku", "Kittu" };
+		PrintMax(intArray);
+		PrintMax(floatArray);
+		PrintMax(stringArray);
 
 	}
-		
-	public static void main(String args[]) {
-		//Find Maximum Integer Element From array
-		Integer[] intArray = { 10, 55, 24, 97,100,2,59};
-		findmax(intArray);
-		
-	}
+
 }

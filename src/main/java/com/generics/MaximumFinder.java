@@ -16,8 +16,12 @@ public class MaximumFinder {
 		return max; // returns the largest object
 	} // end method maximum
 
+	
+	
 	public static void main(String args[]) {
 		// Find Maximum Integer Value.
-		System.err.println("Maximum Value Is =" + maximum(90, 37, 55));
+		System.out.println("Maximum Integer Value Is = " + maximum(90, 37, 55));
+		// Find Maximum Float Value.
+		System.out.println("Maximum Float Value Is = " + maximum(1.2, 2.4, 5.5));
 	}
 }

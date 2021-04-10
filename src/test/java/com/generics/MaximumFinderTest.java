@@ -23,4 +23,5 @@ public class MaximumFinderTest {
 		Assert.assertEquals(110, maxValue);
 		// or Assert.assertTrue(maxValue == 110);
 	}
+	
 }
